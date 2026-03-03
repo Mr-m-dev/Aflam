@@ -1,0 +1,36 @@
+{
+  "cli": {
+    "version": ">=3.13.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {
+      "distribution": "store"
+    },
+    "android_build": {
+      "extends": "production",
+      "platform": "android"
+    },
+    "ios_build": {
+      "extends": "production",
+      "platform": "ios"
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "ascAppId": "your-app-id"
+      },
+      "android": {
+        "serviceAccount": "path/to/service-account.json",
+        "track": "internal"
+      }
+    }
+  }
+}
