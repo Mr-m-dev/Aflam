@@ -20,7 +20,6 @@
         "ascAppId": "your-app-id"
       },
       "android": {
-        "serviceAccountKey": "path/to/service-account.json",
         "track": "internal"
       }
     }
