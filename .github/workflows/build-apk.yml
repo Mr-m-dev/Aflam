@@ -1,0 +1,28 @@
+name: Build Android APK
+on:
+  push:
+    branches: [ main ] # أو الفرع الذي تريد
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Clone repo
+        uses: actions/checkout@v4
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+      - name: 📦 Install dependencies
+        run: npm install
+      - name: 🚀 Setup Expo
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+      - name: 🏗️ Build APK
+        run: eas build --platform android --profile preview --local --non-interactive
+      - name: 📤 Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release
+          path: "*.apk"
