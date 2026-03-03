@@ -16,7 +16,7 @@
   "dependencies": {
     "@expo-google-fonts/inter": "*",
     "@expo/vector-icons": "*",
-    "@react-native-async-storage/async-storage": "^2.2.0",
+    "@react-native-async-storage/async-storage": "^3.0.1",
     "@stardazed/streams-text-encoding": "*",
     "@tanstack/react-query": "*",
     "@ungap/structured-clone": "*",
