@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "outputDirectory": "static-build",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
