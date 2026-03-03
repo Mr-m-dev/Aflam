@@ -1,7 +1,7 @@
 name: Build Android APK
 on:
   push:
-    branches: [ main ] # أو الفرع الذي تريد
+    branches: [ main ]
 jobs:
   build:
     runs-on: ubuntu-latest
