@@ -1,5 +1,0 @@
-{
-  "buildCommand": "npm run expo:static:build",
-  "outputDirectory": "dist",
-  "framework": "expo"
-}
